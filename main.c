@@ -18,12 +18,12 @@ int main() {
     for (int i = 0; i < SALTLEN; i++) {
         sprintf(salt_hex + (i * 2), "%02x", salt[i]);
     }
-    printf("Generated Salt: %s\n", salt_hex);
+    printf("Generated_Salt: %s\n", salt_hex);
 
     char hashed_password[HASHLEN * 2 + 1];
     hash_password(password, salt, hashed_password);
 
-    printf("Hashed Password: %s\n", hashed_password);
+    printf("Hashed_Password: %s\n", hashed_password);
 
     int is_valid = verify_password(password, salt, hashed_password);
     printf("Password is %s\n", is_valid ? "valid" : "invalid");
