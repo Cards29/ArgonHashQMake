@@ -10,7 +10,7 @@ int main() {
     const char *password = "user_password";
     uint8_t salt[SALTLEN];
 
-    // Generate a random salt
+    // Generate a random salt and pepper
     generate_salt(salt, SALTLEN);
 
     // Convert salt to hex string for displaying
